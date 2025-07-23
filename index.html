@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free-Bee.Tools - Your Hive of Free Web Utilities</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom styles to extend Tailwind */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFBEB; /* A very light yellow, like honeycomb interior */
+        }
+
+        /* Honeycomb background pattern for the hero section */
+        .honeycomb-bg {
+            background-color: #FFC700; /* Bee Yellow */
+            background-image:
+                linear-gradient(30deg, #F9731644 12%, transparent 12.5%, transparent 87%, #F9731644 87.5%, #F9731644),
+                linear-gradient(150deg, #F9731644 12%, transparent 12.5%, transparent 87%, #F9731644 87.5%, #F9731644),
+                linear-gradient(30deg, #F9731644 12%, transparent 12.5%, transparent 87%, #F9731644 87.5%, #F9731644),
+                linear-gradient(150deg, #F9731644 12%, transparent 12.5%, transparent 87%, #F9731644 87.5%, #F9731644),
+                linear-gradient(60deg, #F9731688 25%, transparent 25.5%, transparent 75%, #F9731688 75%, #F9731688),
+                linear-gradient(60deg, #F9731688 25%, transparent 25.5%, transparent 75%, #F9731688 75%, #F9731688);
+            background-size: 80px 140px;
+            background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+        }
+
+        /* Custom brand colors for Tailwind */
+        .bg-bee-yellow { background-color: #FFC700; }
+        .text-bee-yellow { color: #FFC700; }
+        .hover\:bg-bee-yellow-dark:hover { background-color: #E0B000; }
+
+        .bg-honey-orange { background-color: #F97316; }
+        .text-honey-orange { color: #F97316; }
+        .hover\:bg-honey-orange-dark:hover { background-color: #EA580C; }
+
+        .bg-earth-brown { background-color: #6B4F4F; }
+        .text-earth-brown { color: #6B4F4F; }
+
+        .bg-leaf-green { background-color: #84CC16; } /* Adjusted for better visibility */
+        .text-leaf-green { color: #84CC16; }
+        
+        .text-charcoal { color: #2D2D2D; }
+        .bg-charcoal { background-color: #2D2D2D; }
+
+        /* Smooth transition for all interactive elements */
+        .transition-all {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-charcoal">
+
+    <!-- Header -->
+    <header class="p-4 md:p-6">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <!-- NEW Simple Hexagon Logo -->
+                <svg class="w-10 h-10" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <polygon points="50,5 95,27.5 95,72.5 50,95 5,72.5 5,27.5" fill="#FFC700" stroke="#6B4F4F" stroke-width="8" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-2xl font-bold text-charcoal">free-bee.tools</span>
+            </a>
+            <a href="#tools" class="hidden md:inline-block bg-honey-orange text-white font-bold py-2 px-5 rounded-full hover:bg-honey-orange-dark transition-all shadow-md">
+                Explore Tools
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="honeycomb-bg text-center py-20 md:py-32 px-4">
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-charcoal leading-tight">
+                    A Hive of Free, Simple Tools
+                </h1>
+                <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto text-charcoal/80">
+                    Buzzing with useful utilities for your everyday digital tasks. No sign-ups, no fees, just free bees.
+                </p>
+                <a href="#tools" class="mt-8 inline-block bg-charcoal text-white font-bold py-4 px-8 rounded-full text-lg hover:bg-gray-800 transition-all shadow-xl">
+                    Get Started
+                </a>
+            </div>
+        </section>
+
+        <!-- Tools Section -->
+        <section id="tools" class="py-16 md:py-24">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-charcoal">Our Busy Bees' Toolkit</h2>
+                    <p class="mt-2 text-md text-charcoal/70 max-w-xl mx-auto">Click on a tool to visit its dedicated page. We're always building more!</p>
+                </div>
+
+                <!-- Tools Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Tool Card: Planning Poker -->
+                    <a href="https://planning-poker.free-bee.tools/" target="_blank" class="block bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all border-t-4 border-bee-yellow">
+                        <div class="flex items-center gap-4 mb-4">
+                            <!-- Icon -->
+                            <div class="bg-bee-yellow/10 p-3 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-bee-yellow" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-charcoal">Planning Poker</h3>
+                        </div>
+                        <p class="text-charcoal/80">
+                            An agile estimation tool for teams. Collaborate in real-time to estimate story points for your project tasks.
+                        </p>
+                    </a>
+
+                    <!-- Tool Card: QR Code Creator -->
+                    <a href="https://qr.free-bee.tools/" target="_blank" class="block bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all border-t-4 border-honey-orange">
+                        <div class="flex items-center gap-4 mb-4">
+                            <!-- Icon -->
+                            <div class="bg-honey-orange/10 p-3 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-honey-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v1m6 11h2m-6.598 5.998l-1.06-1.06M5 12H3m2.598-5.998l1.06-1.06M12 20.25a8.25 8.25 0 100-16.5 8.25 8.25 0 000 16.5z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-charcoal">QR Code Creator</h3>
+                        </div>
+                        <p class="text-charcoal/80">
+                            Instantly generate a QR code from any text or URL. Customize and download for your menus, posters, or business cards.
+                        </p>
+                    </a>
+
+                    <!-- Tool Card: Coming Soon -->
+                    <div class="bg-gray-100/50 p-8 rounded-2xl border-dashed border-2 border-gray-300 flex flex-col items-center justify-center text-center">
+                        <div class="bg-leaf-green/10 p-3 rounded-full mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-leaf-green" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-charcoal/70">More Tools Brewing</h3>
+                        <p class="text-charcoal/60 mt-2">Our worker bees are busy crafting new tools. Check back soon for more honey-sweet utilities!</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-earth-brown text-white/80">
+        <div class="container mx-auto px-4 py-8 text-center">
+            <p>&copy; 2025 Free-Bee.Tools. All Rights Reserved.</p>
+            <p class="text-sm mt-2">A fun project providing sweet, free utilities to the world.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
